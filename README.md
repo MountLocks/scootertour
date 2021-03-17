@@ -1,6 +1,6 @@
 # scootertour
 
-[![Actions Status](https://github.com/MountLocks/scootertour/workflows/Build/badge.svg)](https://github.com/MountLocks/scootertour/actions)
+[![Actions Status](https://github.com/MountLocks/scootertour/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/MountLocks/scootertour/actions/workflows/firebase-hosting-merge.yml)
 [![License](http://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)
 
 ## Project setup
