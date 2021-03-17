@@ -1,14 +1,14 @@
 <template>
-  <LandingPage />
+  <TourView />
 </template>
 
 <script>
-import LandingPage from "@/components/LandingPage.vue";
+import TourView from "@/components/TourView.vue";
 
 export default {
   name: "Home",
   components: {
-    LandingPage
+    TourView
   }
 };
 </script>

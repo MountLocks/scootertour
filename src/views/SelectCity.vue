@@ -1,14 +1,14 @@
 <template>
-  <LandingPage />
+  <CitySelector />
 </template>
 
 <script>
-import LandingPage from "@/components/LandingPage.vue";
+import CitySelector from "@/components/CitySelector.vue";
 
 export default {
   name: "Home",
   components: {
-    LandingPage
+    CitySelector
   }
 };
 </script>
