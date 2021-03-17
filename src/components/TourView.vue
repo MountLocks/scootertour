@@ -116,7 +116,7 @@ export default {
       }
     ];
     this.attractions = result;
-    this.selected = Array.from(Array(result.length).keys());
+    this.selected = Array.from(Array(3).keys());
   },
   computed: {},
   methods: {
