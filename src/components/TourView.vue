@@ -145,7 +145,7 @@ export default {
         waypoints +
         "&waypoint_place_ids=" +
         waypoint_place_ids;
-      console.log(url);
+      window.open(url, "_blank");
     }
   }
 };
