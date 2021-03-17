@@ -11,7 +11,7 @@
         solo
       ></v-select>
       <h3 class="text-center">Nearby Attractions</h3>
-      <v-item-group multiple v-model="selected">
+      <v-item-group max="3" multiple v-model="selected">
         <v-container>
           <v-row>
             <v-col
