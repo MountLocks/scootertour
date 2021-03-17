@@ -1,5 +1,8 @@
 # scootertour
 
+[![Actions Status](https://github.com/MountLocks/scootertour/workflows/Build/badge.svg)](https://github.com/MountLocks/scootertour/actions)
+[![License](http://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)
+
 ## Project setup
 ```
 npm install
