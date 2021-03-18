@@ -21,12 +21,13 @@
 </template>
 
 <script>
+import { db } from "@/firebase/init.js";
 export default {
   name: "CitySelector",
   data() {
     return {
-      city: "Miami, FL",
-      cities: ["Miami, FL"]
+      city: null,
+      cities: []
     };
   },
   computed: {},
@@ -34,6 +35,15 @@ export default {
     tour(city) {
       this.$router.push("/tour/" + city);
     }
+  },
+  async mounted() {
+    let snapshot = await db
+      .collection("data")
+      .orderBy("cityList")
+      .get();
+    let cityList = snapshot.docs[0].data().cityList;
+    this.city = cityList[0];
+    this.cities = cityList;
   }
 };
 </script>
