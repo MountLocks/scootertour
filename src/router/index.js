@@ -11,6 +11,16 @@ const routes = [
     component: Home
   },
   {
+    path: "/upload",
+    name: "Upload",
+    component: () => import("../views/Upload.vue")
+  },
+  {
+    path: "/uploadform/:property",
+    name: "Upload Form",
+    component: () => import("../views/UploadForm.vue")
+  },
+  {
     path: "/selectcity",
     name: "SelectCity",
     component: () => import("../views/SelectCity.vue")

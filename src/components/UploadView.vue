@@ -9,11 +9,25 @@
             :items="cities"
             label="Select"
             solo
+            @input="loadProperties(city)"
+          ></v-select>
+        </v-flex>
+        <v-flex v-if="city" xs12>
+          <h1 class="pb-5">Select Property</h1>
+          <v-select
+            v-model="property"
+            :items="properties"
+            label="Select"
+            solo
           ></v-select>
         </v-flex>
         <v-spacer></v-spacer>
         <v-flex class="pt-5" xs12>
-          <v-btn :disabled="city == null" @click="tour(city)">Continue</v-btn>
+          <v-btn
+            :disabled="city == null || property == null"
+            @click="navigate(property)"
+            >Continue</v-btn
+          >
         </v-flex>
       </v-container>
     </v-layout>
@@ -23,17 +37,27 @@
 <script>
 import { db } from "@/firebase/init.js";
 export default {
-  name: "CitySelector",
+  name: "UploadView",
   data() {
     return {
       city: null,
-      cities: []
+      cities: [],
+      property: null,
+      properties: []
     };
   },
   computed: {},
   methods: {
-    tour(city) {
-      this.$router.push("/tour/" + city);
+    async loadProperties(city) {
+      let snapshot = await db
+        .collection("properties")
+        .where("city", "==", city)
+        .get();
+      let propertyList = snapshot.docs.map(doc => doc.id);
+      this.properties = propertyList;
+    },
+    navigate(property) {
+      this.$router.push("/uploadform/" + property);
     }
   },
   async mounted() {

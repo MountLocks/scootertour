@@ -6,7 +6,7 @@
 import CitySelector from "@/components/CitySelector.vue";
 
 export default {
-  name: "Home",
+  name: "SelectCity",
   components: {
     CitySelector
   }

@@ -3,6 +3,7 @@
     <v-toolbar color="#333B52">
       <v-spacer></v-spacer>
       <v-btn text class="white--text" @click="home()">Mount ScooterTour</v-btn>
+      <v-btn text class="white--text" @click="upload()">Upload Info</v-btn>
       <v-spacer></v-spacer>
     </v-toolbar>
   </div>
@@ -18,6 +19,9 @@ export default {
   methods: {
     home() {
       this.$router.push("/");
+    },
+    upload() {
+      this.$router.push("/upload");
     }
   }
 };

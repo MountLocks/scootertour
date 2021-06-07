@@ -6,7 +6,7 @@
 import TourView from "@/components/TourView.vue";
 
 export default {
-  name: "Home",
+  name: "Tour",
   components: {
     TourView
   }
